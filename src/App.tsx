@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import SudokuGame from './components/SugokuGame';
+
+const StyledApp = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledGameContainer = styled.div`
+  padding-top: 50px;
+  width: 450px;
+  height: 450px;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp>
+      <StyledGameContainer>
+        <SudokuGame />
+      </StyledGameContainer>
+    </StyledApp>
   );
 }
 
